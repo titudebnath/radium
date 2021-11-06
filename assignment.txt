@@ -1,0 +1,81 @@
+Termincal commands assignment:
+1. For this assignment, your terminal will be reviewed. Don’t clear the terminal.
+Problem 1:
+- Create a folder called ‘assignment’
+- Inside ‘assignment’ create 2 folders ‘source’ and ‘destination’
+- Inside ‘source’ create a text file using a command ( not manually)
+- Add content in the text file
+- copy the contents of ‘source’ folder in ‘destination’ using cp command
+End result : both the folders source and destination should have the same file
+Problem 2:
+- Remove the above file from ‘destination’ folder
+- Move the file from ‘source’ to ‘destination’
+End result: Only destination folder should have the file.
+Problem 3:
+- Edit the above file in ‘destination’ folder and add a lot of lines of text with ‘functionup’ mentioned in a few lines
+- Use the grep command to find all the lines containing the key word ‘functionup’
+
+
+
+Solution- 
+
+PS C:\Users\HP> cd desktop
+PS C:\Users\HP\desktop> mkdir assignment
+
+
+    Directory: C:\Users\HP\desktop
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        02-Nov-21  11:05 PM                assignment
+
+
+PS C:\Users\HP\desktop> cd assignment
+PS C:\Users\HP\desktop\assignment> mkdir source
+
+
+    Directory: C:\Users\HP\desktop\assignment
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        02-Nov-21  11:05 PM                source
+
+
+PS C:\Users\HP\desktop\assignment> mkdir destination
+
+
+    Directory: C:\Users\HP\desktop\assignment
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        02-Nov-21  11:06 PM                destination
+
+
+PS C:\Users\HP\desktop\assignment> cd source
+PS C:\Users\HP\desktop\assignment\source> cat > new.txt
+PS C:\Users\HP\desktop\assignment\source> cd ..
+PS C:\Users\HP\desktop\assignment> cp source/new.txt destination
+PS C:\Users\HP\desktop\assignment> cd destination
+PS C:\Users\HP\desktop\assignment\destination> rm new.txt
+PS C:\Users\HP\desktop\assignment\destination> cd ..
+PS C:\Users\HP\desktop\assignment> cd source
+PS C:\Users\HP\desktop\assignment\source> mv new.txt C:\Users\HP\Desktop\assignment\destination
+PS C:\Users\HP\desktop\assignment\source> cd ..
+PS C:\Users\HP\desktop\assignment> cd destination
+PS C:\Users\HP\desktop\assignment\destination> grep -i 'functionup' new.txt
+PS C:\Users\HP\desktop\assignment\destination> ls new.txt
+
+
+    Directory: C:\Users\HP\desktop\assignment\destination
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        02-Nov-21  11:31 PM            319 new.txt
+
+
+PS C:\Users\HP\desktop\assignment\destination>
+
